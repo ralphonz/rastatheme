@@ -80,3 +80,32 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+add_filter('sage/display_sidebar', function($display){
+    static $display;
+
+    isset($display) || $display = in_array(true, [
+        //The sidebar will be displayed if any of the following return true
+        is_shop(),
+        is_woocommerce(),
+        is_page_template('views/template-departments.blade.php'),
+    ]);
+
+    return $display;
+});
+
+/**
+ * Change the markup of the add to cart button to add svg icon
+ */
+add_filter('woocommerce_loop_add_to_cart_link', function($html){
+    $svg = file_get_contents(get_template_directory()."/assets/images/add_to_cart.svg");
+    $html = str_replace("</a>",$svg."</a>",$html);
+    return $html;
+});
+
+/**
+ * Change number or products per row to 3
+ */
+add_filter('loop_shop_columns', function() {
+    return 3; // 3 products per row
+});

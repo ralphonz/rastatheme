@@ -1,0 +1,50 @@
+@import "common/variables";
+
+body {
+  background-color: $black;
+}
+
+.login #login {
+  h1 {
+    background-image: url('../images/banner.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    a {
+      background-image: none;
+    }
+  }
+
+  .message {
+    background-color: $white;
+    color: $black;
+    border-color: $red;
+  }
+
+  form {
+    .button-primary {
+      background-color: $green;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      text-shadow: none;
+      color: $black;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      padding-left: 0.5em;
+    }
+
+    .forgetmenot {
+      margin-top: 6px;
+    }
+  }
+
+  #nav a,
+  #backtoblog a {
+    color: $white;
+  }
+}

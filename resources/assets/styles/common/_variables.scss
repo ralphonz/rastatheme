@@ -8,3 +8,16 @@ $theme-colors: (
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
+
+$red: hsla(357, 75%, 49%, 1);
+$gold: hsla(48, 93%, 54%, 1);
+$green: hsla(129, 79%, 29%, 1);
+
+$black: #000;
+$white: #fff;
+$light-grey: hsla(0, 0%, 92%, 1);
+$gray: hsla(0, 0%, 70%, 1);
+$dark-gray: hsla(0, 0%, 40%, 1);
+
+/** Typography variables **/
+$font: #2e2e2e;

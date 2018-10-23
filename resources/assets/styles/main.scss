@@ -1,4 +1,6 @@
 @import "common/variables";
+@import "common/functions";
+@import "common/mixins";
 
 /** Import everything from autoload */
 @import "./autoload/**/*";
@@ -13,13 +15,22 @@
 
 /** Import theme styles */
 @import "common/global";
+@import "common/typography";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
 @import "components/wp-classes";
+@import "components/wc-classes";
+@import "components/icons";
+@import "components/nav";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+@import "layouts/wc-categories";
+@import "layouts/departments";
+@import "layouts/wc-single-product";
+@import "layouts/wc-cart";
+@import "layouts/wc-checkout";

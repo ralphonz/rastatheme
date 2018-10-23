@@ -1,0 +1,36 @@
+.nav {
+  @include skranji;
+
+  padding: 0.5rem 0;
+}
+
+.nav ul {
+  padding: 0;
+  background-color: $black;
+}
+
+.nav li {
+  @extend .nav-item;
+
+  text-align: center;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+.nav a {
+  @extend .nav-link;
+
+  color: $white;
+}
+
+.dropdown-menu {
+  @include stripes-bottom;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: $black;
+  color: $green;
+}

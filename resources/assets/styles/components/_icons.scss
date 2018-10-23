@@ -1,0 +1,25 @@
+.icon svg {
+  fill: $white;
+}
+
+.red-icon svg {
+  fill: $red;
+}
+
+.gold-icon svg {
+  fill: $gold;
+}
+
+.green-icon svg {
+  fill: $green;
+}
+
+.icon:hover svg {
+  fill: $white;
+}
+
+.up-arrow {
+  display: inline-block;
+  margin-right: calculate-rem(7px);
+  transform: rotate(270deg);
+}

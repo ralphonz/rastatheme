@@ -6,6 +6,9 @@
     ],
     "customizer": [
       "./scripts/customizer.js"
+    ],
+    "login": [
+      "./styles/login.scss"
     ]
   },
   "publicPath": "/wp-content/themes/rastatheme",
@@ -16,5 +19,6 @@
     "app/**/*.php",
     "config/**/*.php",
     "resources/views/**/*.php"
-  ]
+  ],
+  "headers": { "Access-Control-Allow-Origin": "*" }
 }

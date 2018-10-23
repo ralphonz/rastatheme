@@ -1,3 +1,9 @@
+@import "../common/typography";
+
 body#tinymce {
+  @include fontSize(14px);
+
   margin: 12px !important;
+  font-family: Arial, sans-serif;
+  color: #2e2e2e;
 }

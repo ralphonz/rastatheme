@@ -1,0 +1,51 @@
+.btn {
+  @include skranji;
+
+  border-radius: calculate-rem(2px);
+  border: 0;
+}
+
+.button,
+input[type="button"],
+input[type="submit"],
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce #respond input#submit {
+  @extend .btn;
+
+  @include stripes-bottom;
+
+  background-color: $black;
+  color: $white;
+  font-weight: normal;
+  line-height: 1;
+
+  &:hover {
+    background-color: $black;
+    color: $gray;
+  }
+}
+
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce button.disabled.button.alt {
+  background-color: $black;
+  color: $white;
+
+  &:hover {
+    background-color: $black;
+    color: $gray;
+  }
+}
+
+.btn-red {
+  background-color: $red;
+}
+
+.btn-gold {
+  background-color: $gold;
+}
+
+.btn-green {
+  background-color: $green;
+}

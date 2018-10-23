@@ -1,0 +1,33 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css?family=Skranji');
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  @include media-breakpoint-up(lg) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    background: url('../images/bg.jpg') no-repeat center calculate-rem(242px);
+    background-attachment: fixed;
+  }
+}
+
+.wrap {
+  order: 4;
+  flex: 1 0 auto;
+}
+
+// if there's a .sidebar, make some room for it on larger devices
+// below this breakpoint will naturally be stacked
+@include media-breakpoint-up(lg) {
+  .wrap {
+    flex: 9;
+  }
+
+  .sidebar {
+    flex: 3;
+    min-width: 270px; // width of search widget
+  }
+}

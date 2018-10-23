@@ -1,0 +1,48 @@
+.content-info {
+  @include stripes-top(true);
+
+  order: 5;
+  margin-top: 1rem;
+  background-color: $black;
+  padding-bottom: calculate-rem(16px);
+
+  .nav {
+    padding-top: calculate-rem(14px);
+  }
+
+  @include media-breakpoint-up(md) {
+    .container {
+      max-width: 100%;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 100vw;
+  }
+}
+
+.social-networks {
+  max-width: calculate-rem(320px);
+  margin-left: auto;
+  margin-right: auto;
+  padding: calculate-rem(16px) 0;
+
+  .icon {
+    display: inline-block;
+    width: calculate-rem(32px);
+    height: calculate-rem(32px);
+  }
+}
+
+.copyright {
+  margin: calculate-rem(7px) calculate-rem(14px);
+  text-align: center;
+  color: $white;
+}
+
+.backtotop {
+  margin-top: calculate-rem(16px);
+  text-align: center;
+  color: $white;
+  cursor: pointer;
+}

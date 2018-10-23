@@ -1,0 +1,143 @@
+.widget {
+  overflow: hidden;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.widget-content {
+  padding: 1rem;
+
+  & > ul {
+    margin-bottom: 0;
+    padding-left: 1rem;
+  }
+}
+
+#wp-calendar {
+  margin: 0 auto;
+}
+
+.sidebar {
+  order: 3;
+
+  .widget {
+    @include stripes-bottom;
+
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+    @include media-breakpoint-up(lg) {
+      margin: 2rem 1rem 3rem 2rem;
+      border: 1px solid $gray;
+      background-color: $white;
+    }
+
+    h3 {
+      @include fontSize(22px);
+
+      margin-bottom: 0;
+    }
+
+    h3::before {
+      content: "";
+      width: 22px;
+      height: 16px;
+      display: inline-block;
+      margin-right: 0.5rem;
+      background: url('../images/bars.svg');
+    }
+
+    & > ul {
+      margin-top: calculate-rem(12px);
+      margin-bottom: 0;
+    }
+
+    .product-categories,
+    .product-departments {
+      @include fontSize(16px);
+
+      list-style-type: none;
+
+      li {
+        padding: 0.5rem 0;
+      }
+
+      a {
+        color: $dark-gray;
+      }
+
+      ul {
+        margin-top: 1rem;
+        list-style-type: none;
+      }
+    }
+  }
+}
+
+.content-widgets {
+  clear: both;
+
+  .widget {
+    margin-bottom: 1.5rem;
+    border: 1px solid $gray;
+
+    @include media-breakpoint-down(xs) {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      width: 48%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      background-color: $white;
+    }
+
+    h3 {
+      @include stripes-bottom;
+
+      margin-bottom: calculate-rem(16px);
+      padding: 0.75rem 0.75rem 0.5rem;
+    }
+  }
+}
+
+.contact {
+  .widget {
+    @include media-breakpoint-up(sm) {
+      width: 32%;
+      margin-bottom: 0;
+      margin-top: 0.75em;
+    }
+
+    @include media-breakpoint-up(lg) {
+      background-color: $white;
+    }
+
+    .connect-container a {
+      display: block;
+    }
+  }
+
+  .address-container {
+    h3 {
+      color: $red;
+    }
+  }
+
+  .phone-container {
+    h3 {
+      color: $gold;
+    }
+  }
+
+  .connect-container {
+    h3 {
+      color: $green;
+    }
+  }
+}

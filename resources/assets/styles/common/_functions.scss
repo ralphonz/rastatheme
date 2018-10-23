@@ -1,0 +1,10 @@
+
+@function calculate-rem($size) {
+  $remSize: $size / 16px;
+
+  @return #{$remSize}rem;
+}
+
+@function get-line-height($font-size, $line-height) {
+  @return $line-height / $font-size;
+}

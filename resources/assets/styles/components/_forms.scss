@@ -1,19 +1,117 @@
-/** Search form */
-.search-form {
-  @extend .form-inline;
+input {
+  padding: 0.5rem;
+  border-radius: calculate-rem(2px);
+  border: 1px solid $gray;
 }
 
-.search-form label {
-  @extend .form-group;
+.input-red {
+  background-color: $red;
+}
 
-  font-weight: normal;
+.input-gold {
+  background-color: $gold;
+}
+
+.input-green {
+  background-color: $green;
+}
+
+/** Login Form **/
+.login-form {
+  color: $white;
+
+  input[type="text"],
+  input[type="password"],
+  button {
+    display: block;
+    width: 100%;
+    margin-bottom: calculate-rem(16px);
+    padding: 0.375rem 0.75rem;
+    border: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    button {
+      margin-bottom: 0;
+    }
+  }
+
+  input::placeholder {
+    color: $black;
+  }
+}
+
+.lost_password {
+  display: block;
+  float: right;
+  color: $white;
+}
+
+/** Search form */
+.search-form,
+.woocommerce-product-search {
+  @extend .form-inline;
+
+  display: flex;
+
+  label {
+    @extend .form-group;
+
+    flex-grow: 1;
+    margin-bottom: 0;
+    font-weight: normal;
+  }
+
+  .search-field {
+    @extend .form-control;
+
+    flex-grow: 1;
+    width: auto;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.woocommerce-product-search button {
+  @extend .btn, .btn-secondary;
+
+  background-color: $black;
+}
+
+.search-submit {
+  margin-bottom: 0;
+  flex-shrink: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: $black;
+  box-shadow: none;
+  border: 1px solid $black;
+  text-align: left;
 }
 
 .search-form .search-field {
-  @extend .form-control;
+  width: 100%;
 }
 
-.search-form .search-submit {
-  @extend .btn;
-  @extend .btn-secondary;
+/** Ninja forms **/
+.nf-form-cont {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid $gray;
+
+  @include media-breakpoint-up(lg) {
+    background-color: $white;
+  }
+
+  input:not([type="button"]) {
+    border: 1px solid $gray;
+  }
+
+  .nf-form-fields-required {
+    display: none;
+  }
+}
+
+.nf-form-layout {
+  margin-top: 2rem;
 }

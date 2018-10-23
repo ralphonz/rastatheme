@@ -1,0 +1,32 @@
+.woocommerce {
+  .woocommerce-cart-form {
+    table.shop_table {
+      .actions {
+        padding-bottom: 1rem;
+      }
+    }
+
+    .coupon {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .cart_totals h2 {
+    text-align: center;
+  }
+
+  .wc-proceed-to-checkout {
+    text-align: center;
+
+    a.button {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  table.shop_table {
+    background-color: $white;
+  }
+}

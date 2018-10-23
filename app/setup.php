@@ -44,7 +44,8 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_navigation' => __('Primary Navigation', 'rastatheme'),
+        'footer_navigation' => __('Footer Navigation', 'rastatheme')
     ]);
 
     /**
@@ -78,17 +79,21 @@ add_action('after_setup_theme', function () {
 add_action('widgets_init', function () {
     $config = [
         'before_widget' => '<section class="widget %1$s %2$s">',
-        'after_widget'  => '</section>',
+        'after_widget'  => '</div></section>',
         'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
+        'after_title'   => '</h3><div class="widget-content">'
     ];
     register_sidebar([
-        'name'          => __('Primary', 'sage'),
+        'name'          => __('Primary', 'rastatheme'),
         'id'            => 'sidebar-primary'
     ] + $config);
     register_sidebar([
-        'name'          => __('Footer', 'sage'),
-        'id'            => 'sidebar-footer'
+        'name'          => __('Header', 'rastatheme'),
+        'id'            => 'sidebar-header'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Content', 'rastatheme'),
+        'id'            => 'sidebar-content'
     ] + $config);
 });
 

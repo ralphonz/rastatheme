@@ -1,0 +1,84 @@
+.woocommerce,
+.woocommerce-page {
+  ul.products[class*=columns-] {
+    padding: 0 calculate-rem(14px);
+
+    @include media-breakpoint-up(sm) {
+      margin-top: 2rem;
+    }
+
+    li.product {
+      border: 1px solid $gray;
+
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+      }
+
+      @include media-breakpoint-up(lg) {
+        background-color: $white;
+      }
+
+      h2 {
+        @include fontSize(22px);
+        @include stripes-bottom;
+
+        margin-bottom: calculate-rem(15px);
+        padding-bottom: calculate-rem(14px);
+        text-align: center;
+      }
+
+      .price {
+        @include skranji;
+        @include fontSize(22px);
+        @include stripes-bottom;
+
+        float: left;
+        width: 75%;
+        margin: 0;
+        padding: 1rem;
+        background: $black;
+        color: $white;
+        line-height: 1;
+        white-space: nowrap;
+      }
+
+      a.button {
+        @include fontSize(22px);
+
+        display: block;
+        float: right;
+        width: 25%;
+        margin: 0;
+        padding: 1rem;
+        overflow: hidden;
+        border-radius: 0;
+        white-space: nowrap;
+        text-indent: -9999px;
+
+        svg {
+          display: block;
+          float: right;
+          width: 25px;
+          fill: $white;
+        }
+      }
+    }
+
+    .added_to_cart {
+      padding-top: 2em;
+      text-align: center;
+      width: 100%;
+      padding-bottom: 0.83em;
+    }
+  }
+
+  .woocommerce-result-count,
+  .woocommerce-ordering {
+    float: none;
+    text-align: center;
+  }
+}
+
+.woocommerce-pagination {
+  margin-bottom: 2rem;
+}
