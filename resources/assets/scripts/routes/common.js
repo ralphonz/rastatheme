@@ -18,10 +18,12 @@ export default {
     });
 
     //show/hide the primary widgets on mobile devices
-    $('.sidebar .widget-content').hide();
-    $('.sidebar .widget h3').click(function(){
-      $(this).siblings().toggle('show');
-    });
+    if ( windowWidth < 768 ) {
+      $('.sidebar .widget-content').hide();
+      $('.sidebar .widget h3').click(function(){
+        $(this).siblings().toggle('show');
+      });
+    }
 
     //show all the product tabs on single product pages
     if ( windowWidth < 768 ) {

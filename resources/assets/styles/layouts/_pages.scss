@@ -1,5 +1,5 @@
 .content {
-  padding-top: calculate-rem(16px);
+  padding-top: calculate-rem(26px);
   padding-bottom: calculate-rem(24px);
 }
 
@@ -15,7 +15,7 @@
 }
 
 @include media-breakpoint-up(lg) {
-  .main:not(.template-contact .main, .woocommerce-page .main) {
+  .main:not(.template-contact .main, .woocommerce-page .main, .template-departments .main) {
     margin: 2rem 0;
     padding: 1rem;
     background-color: $white;

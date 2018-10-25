@@ -91,6 +91,10 @@
     }
   }
 
+  @include media-breakpoint-up(lg) {
+    padding-left: 0;
+  }
+
   .woocommerce-form__input-checkbox {
     position: relative;
     top: calculate-rem(-2px);
@@ -105,6 +109,10 @@
     right: 0;
     top: 0;
     width: 25%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-right: 0;
   }
 
   .btn {
@@ -126,6 +134,14 @@
   }
 }
 
+.header-login input,
+.header-login .btn,
+.header-cart .btn {
+  border-radius: 0;
+  border: 1px solid $black !important;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+}
+
 /** Widget area (search) **/
 .header-widgets {
   order: 2;
@@ -138,7 +154,11 @@
   }
 
   @include media-breakpoint-up(lg) {
-    width: 100vw;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
     padding-bottom: 0;
   }
 }

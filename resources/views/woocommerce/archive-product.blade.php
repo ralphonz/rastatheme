@@ -18,23 +18,23 @@ the readme will list any important changes.
 
 @section('content')
   @php
-    // do_action('get_header', 'shop');
-    // do_action('woocommerce_before_main_content');
+    do_action('get_header', 'shop');
+    do_action('woocommerce_before_main_content');
   @endphp
 
-  <header class="woocommerce-products-header">
+  <header class="woocommerce-products-header clearfix">
     @if(apply_filters('woocommerce_show_page_title', true))
       <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
     @endif
 
     @php
       do_action('woocommerce_archive_description');
+      do_action('woocommerce_before_shop_loop');
     @endphp
   </header>
 
   @if(woocommerce_product_loop())
     @php
-      do_action('woocommerce_before_shop_loop');
       woocommerce_product_loop_start();
     @endphp
 

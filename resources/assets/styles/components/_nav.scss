@@ -23,6 +23,16 @@
   @extend .nav-link;
 
   color: $white;
+
+  @include media-breakpoint-up(lg) {
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
 }
 
 .dropdown-menu {

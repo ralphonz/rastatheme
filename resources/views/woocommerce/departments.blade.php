@@ -6,7 +6,7 @@ $terms = get_terms(array(
 ) );
 @endphp
 
-<section class="departments d-sm-flex flex-wrap">
+<section class="departments d-sm-flex flex-sm-wrap justify-content-md-between">
   @foreach ($terms as $term)
     <div class="department">
       <h2 class="department-title">  <a href="{{ get_term_link($term->term_id) }}" title="{{ $term->name }}">{{ $term->name }}</a></h2>

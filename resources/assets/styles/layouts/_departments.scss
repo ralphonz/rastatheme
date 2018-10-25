@@ -1,10 +1,14 @@
 .department {
   width: 220px;
   height: 220px;
-  margin: 1.5% auto;
+  margin: 2rem auto;
   overflow: hidden;
   background: url('../images/red-department.jpg') no-repeat;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+
+  @include media-breakpoint-up(md) {
+    margin: 1% 0;
+  }
 
   h2 {
     padding: 0.75rem 0.75rem 0;
@@ -39,12 +43,28 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    top: -8px;
+  }
 }
 
 .template-departments {
+  @include media-breakpoint-down(sm) {
+    .content {
+      padding-top: 0;
+    }
+  }
+
   @include media-breakpoint-only(md) {
     .container {
       max-width: 100%;
+    }
+
+    .sidebar {
+      margin-left: calc(-100vw / 2 + 720px / 2);
+      margin-right: calc(-100vw / 2 + 720px / 2);
     }
   }
 }

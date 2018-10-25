@@ -7,6 +7,10 @@
       margin-top: 2rem;
     }
 
+    @include media-breakpoint-up(lg) {
+      padding: 0;
+    }
+
     li.product {
       border: 1px solid $gray;
 
@@ -81,4 +85,28 @@
 
 .woocommerce-pagination {
   margin-bottom: 2rem;
+}
+
+@include media-breakpoint-up(lg) {
+  .woocommerce-products-header {
+    border: 1px solid $gray;
+    background-color: $white;
+
+    h1 {
+      @include stripes-bottom;
+
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .woocommerce-result-count {
+      float: left;
+      padding-left: 1rem;
+    }
+
+    .woocommerce-ordering {
+      float: right;
+      padding-right: 1rem;
+    }
+  }
 }
