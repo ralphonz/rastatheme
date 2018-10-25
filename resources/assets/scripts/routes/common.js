@@ -1,7 +1,13 @@
 export default {
   init() {
     // JavaScript to be fired on all pages
+
+    /* getting viewport width */
     var windowWidth = $(window).width();
+
+    $(window).resize(function() {
+      windowWidth = $(window).width();
+    });
 
     // Mobile header navigation - ensure only one header widget shows at a time
     if ( windowWidth < 768 ) {
@@ -18,7 +24,7 @@ export default {
     });
 
     //show/hide the primary widgets on mobile devices
-    if ( windowWidth < 768 ) {
+    if ( windowWidth < 1024 ) {
       $('.sidebar .widget-content').hide();
       $('.sidebar .widget h3').click(function(){
         $(this).siblings().toggle('show');
@@ -28,6 +34,11 @@ export default {
     //show all the product tabs on single product pages
     if ( windowWidth < 768 ) {
       $('.panel').show();
+    }
+
+    //chagnge styles addded to nav dropdown on Mobile
+    if ( windowWidth < 768 ) {
+      $('.dropdown-toggle').dropdown({ display: 'static'});
     }
 
   },

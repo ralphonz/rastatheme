@@ -38,6 +38,15 @@
     background: url("../images/banner-md.jpg") no-repeat center;
   }
 
+  @include media-breakpoint-up(lg) {
+    height: calculate-rem(213px);
+    background: url("../images/banner.jpg") no-repeat center;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
   .name {
     position: absolute;
     text-indent: -9999px;
@@ -56,6 +65,12 @@
 
     @include media-breakpoint-up(md) {
       padding-top: 1.75rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include fontSize(12px);
+
+      padding-top: 2.25rem;
     }
   }
 }
@@ -92,6 +107,8 @@
   }
 
   @include media-breakpoint-up(lg) {
+    width: 20%;
+    padding-top: 2.25rem;
     padding-left: 0;
   }
 
@@ -112,6 +129,8 @@
   }
 
   @include media-breakpoint-up(lg) {
+    width: 20%;
+    padding-top: 2.25rem;
     padding-right: 0;
   }
 

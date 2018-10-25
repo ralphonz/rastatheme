@@ -25,7 +25,7 @@
       </button>
 
     </div>
-    <nav class="nav-primary collapse show navbar-toggleable-md" id="nav-primary">
+    <nav class="nav-primary collapse show navbar-toggleable-md navbar-expand-md" id="nav-primary">
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu([
           'theme_location' => 'primary_navigation',
