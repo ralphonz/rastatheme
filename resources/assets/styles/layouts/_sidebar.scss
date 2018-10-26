@@ -17,10 +17,6 @@
   }
 }
 
-#wp-calendar {
-  margin: 0 auto;
-}
-
 .sidebar {
   order: 1;
 
@@ -128,7 +124,7 @@
         li {
           position: relative;
           padding: calculate-rem(5px);
-          white-space: nowrap;
+          // white-space: nowrap;
 
           a {
             display: block;
@@ -136,7 +132,7 @@
             border-radius: calculate-rem(8px);
           }
 
-          &.cat-parent > a::after {
+          &.cat-parent > a::before {
             content: url("../images/right_arrow.svg");
             display: inline-block;
             float: right;
@@ -162,6 +158,26 @@
 .widget_product_departments .widget-content {
   padding-left: 0;
   padding-right: 0;
+}
+
+.header-widgets {
+  order: 2;
+  padding: 1rem;
+
+  @include media-breakpoint-down(md) {
+    @include stripes-bottom;
+
+    margin-bottom: 1rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
 }
 
 .content-widgets {

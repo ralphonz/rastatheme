@@ -30,7 +30,7 @@
 .brand {
   display: block;
   width: 100%;
-  height: calculate-rem(118px);
+  height: calculate-rem(130px);
   background: url("../images/banner-sm.jpg") no-repeat center;
 
   @include media-breakpoint-up(md) {
@@ -39,7 +39,7 @@
   }
 
   @include media-breakpoint-up(lg) {
-    height: calculate-rem(213px);
+    height: calculate-rem(212px);
     background: url("../images/banner.jpg") no-repeat center;
   }
 
@@ -113,8 +113,13 @@
   }
 
   .woocommerce-form__input-checkbox {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
     position: relative;
-    top: calculate-rem(-2px);
+    top: -1px;
   }
 }
 
@@ -159,25 +164,4 @@
   border-radius: 0;
   border: 1px solid $black !important;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
-}
-
-/** Widget area (search) **/
-.header-widgets {
-  order: 2;
-  padding: 1rem;
-
-  @include media-breakpoint-down(md) {
-    @include stripes-bottom;
-
-    margin-bottom: 1rem;
-  }
-
-  @include media-breakpoint-up(lg) {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-  }
 }

@@ -41,6 +41,13 @@ export default {
       $('.dropdown-toggle').dropdown({ display: 'static'});
     }
 
+    // Mitigate IE/Edge bug showing bullets on lists which are hidden when loading the page
+    if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+      $('ul:hidden').each(function(){
+        $(this).parent().append($(this).detach());
+      });
+    }
+
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

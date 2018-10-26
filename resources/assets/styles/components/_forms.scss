@@ -16,6 +16,16 @@ input {
   background-color: $green;
 }
 
+//prevent iphone zoom on select focus
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (max-device-width: 1024px) {
+  select,
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px;
+  }
+}
+
 /** Login Form **/
 .login-form {
   color: $white;

@@ -24,6 +24,10 @@ input[type="submit"],
     background-color: $black;
     color: $gray;
   }
+
+  &:focus {
+    @include stripes-bottom;
+  }
 }
 
 .woocommerce a.button.alt,
