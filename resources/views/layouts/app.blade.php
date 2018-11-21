@@ -9,7 +9,7 @@
     @endif
     <div class="wrap container" role="document">
       <div class="content">
-        <main class="main">
+        <main class="main clearfix">
           @yield('content')
         </main>
       </div>

@@ -29,17 +29,21 @@ add_action('template_redirect', function(){
 add_action('woocommerce_single_product_summary', 'woocommerce_breadcrumb', 11);
 
 /**
- * Remove the woocommerce image gallery
- * @since 1.0
- * @return string
+ * @snippet       Add CSS to WooCommerce Emails
+ * @since 1.1
  */
- // add_action('template_redirect', function(){
-     // remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20, 0);
- // });
-
- /**
-  * Add the woocommerce image gallery below the title
-  * @since 1.0
-  * @return string
-  */
- // add_action('woocommerce_single_product_summary', 'woocommerce_show_product_images', 12);
+add_action( 'woocommerce_email_header', function() {
+    ?><style>
+        #template_header{
+            background-color: #fff;
+            -webkit-box-shadow:0 1px 0 0 #000,0 5px 0 0 #db1f29,0 6px 0 0 #000,0 10px 0 0 #f7cb1d,0 11px 0 0 #000,0 15px 0 0 #108421,0 16px 0 0 #000;
+            box-shadow:0 1px 0 0 #000,0 5px 0 0 #db1f29,0 6px 0 0 #000,0 10px 0 0 #f7cb1d,0 11px 0 0 #000,0 15px 0 0 #108421,0 16px 0 0 #000;margin-bottom:16px
+        }
+        h1 {
+            color: #000 !important;
+            text-shadow: none;
+            text-align: center;
+        }
+        <?php //include asset_path('styles/emails.css'); ?>
+    </style><?php
+});

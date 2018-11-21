@@ -1,0 +1,14 @@
+@import "common/variables";
+@import "common/mixins";
+
+#template_header {
+  @include stripes-bottom;
+
+  background-color: #fff;
+}
+
+h1 {
+  color: #000 !important;
+  text-shadow: none;
+  text-align: center;
+}

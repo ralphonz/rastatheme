@@ -1,6 +1,10 @@
 .content {
   padding-top: calculate-rem(26px);
   padding-bottom: calculate-rem(24px);
+
+  h2 {
+    clear: both;
+  }
 }
 
 .page-header h1,

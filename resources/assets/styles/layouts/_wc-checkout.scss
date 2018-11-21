@@ -43,6 +43,10 @@
   }
 }
 
+.woocommerce-checkout #payment ul.payment_methods li label {
+  width: 100%;
+}
+
 @include media-breakpoint-up(lg) {
   .woocommerce-form-login,
   .woocommerce-form-coupon,

@@ -1,3 +1,23 @@
+.departments {
+  margin-bottom: 1rem;
+
+  &::after {
+    content: "";
+    flex: auto;
+  }
+
+  @include media-breakpoint-up(md) {
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    top: -8px;
+  }
+}
+
 .department {
   width: 220px;
   height: 220px;
@@ -10,8 +30,21 @@
     margin: 1% 0;
   }
 
+  & > a {
+    display: block;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 175px;
+      object-fit: cover;
+      object-position: 50%;
+    }
+  }
+
   h2 {
-    padding: 0.75rem 0.75rem 0;
+    padding: 0.75rem 0.64rem 0;
+    white-space: nowrap;
 
     a {
       color: $red;
@@ -33,20 +66,9 @@
       color: $green;
     }
   }
-}
 
-.departments {
-  margin-bottom: 1rem;
-
-  @include media-breakpoint-up(md) {
-    max-width: 860px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @include media-breakpoint-up(lg) {
-    position: relative;
-    top: -8px;
+  &:last-of-type {
+    margin-left: 15px;
   }
 }
 

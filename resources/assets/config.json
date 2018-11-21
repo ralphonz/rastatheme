@@ -9,6 +9,9 @@
     ],
     "login": [
       "./styles/login.scss"
+    ],
+    "emails": [
+      "./styles/wc_emails.scss"
     ]
   },
   "publicPath": "/wp-content/themes/rastatheme",

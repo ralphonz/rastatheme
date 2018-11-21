@@ -123,13 +123,17 @@
 
         li {
           position: relative;
-          padding: calculate-rem(5px);
-          // white-space: nowrap;
+          padding: 0 calculate-rem(5px) calculate-rem(5px);
 
           a {
             display: block;
             padding: calculate-rem(3px) calculate-rem(15px);
             border-radius: calculate-rem(8px);
+          }
+
+          ul.children {
+            top: calculate-rem(-5px);
+            padding-top: calculate-rem(5px);
           }
 
           &.cat-parent > a::before {
@@ -145,7 +149,7 @@
             text-decoration: none;
           }
 
-          &:hover ul.children {
+          &:hover > ul.children {
             display: block;
           }
         }

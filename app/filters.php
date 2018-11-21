@@ -109,3 +109,23 @@ add_filter('woocommerce_loop_add_to_cart_link', function($html){
 add_filter('loop_shop_columns', function() {
     return 3; // 3 products per row
 });
+
+/**
+ * Stop those pesky Yoast SEO columns from messing up the admin tables!!
+ */
+
+add_filter ( 'manage_edit-product_columns', function( $columns ) {
+   unset( $columns['wpseo-score'] );
+   unset( $columns['wpseo-title'] );
+   unset( $columns['wpseo-metadesc'] );
+   unset( $columns['wpseo-focuskw'] );
+   unset( $columns['wpseo-score-readability'] );
+   unset( $columns['wpseo-links']);
+   return $columns;
+});
+
+/*
+ * Make sure the product is the same price everythwere regardless of price
+ * @url https://github.com/woocommerce/woocommerce/wiki/How-Taxes-Work-in-WooCommerce#prices-including-tax---experimental-behavior
+ */
+ add_filter( 'woocommerce_adjust_non_base_location_prices', '__return_false' );
