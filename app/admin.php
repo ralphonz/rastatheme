@@ -8,7 +8,7 @@ namespace App;
  * @return string
  */
 add_filter('admin_footer_text', function() {
-  echo 'Fueled by <a href="http://www.wordpress.org" target="_blank">WordPress</a> | Designed by <a href="http://blueleafstudio.net" target="_blank" title="Blueleaf Studio Web Design and Development">Blueleaf Studio Web Design and Development</a> | Hosted with 100% renewable energy at <a href="http://www.wpbeginner.com" target="_blank" title="Blueleaf Studio Eco Web Hosting">Blueleaf Web Hosting</a></p>';
+  echo 'Fueled by <a href="http://www.wordpress.org" target="_blank">WordPress</a> | Designed by <a href="http://blueleafstudio.net" target="_blank" title="Blueleaf Studio Web Design and Development">Blueleaf Studio Web Design and Development</a> | Hosted with 100% renewable energy at <a href="http://web-hosting.blueleafstudio.net" target="_blank" title="Blueleaf Studio Eco Web Hosting">Blueleaf Web Hosting</a></p>';
 });
 
 /**
@@ -53,5 +53,23 @@ add_action( 'login_enqueue_scripts', function() {
 add_action('admin_init', function () {
   remove_submenu_page('themes.php', 'theme-editor.php');
   remove_submenu_page('plugins.php', 'plugin-editor.php' );
+});
+
+/**
+ * Remove absolute positioning for admin search box on smaller screens
+ * @since 1.2
+ **/
+add_action('admin_head', function() {
+?> <style>
+    p.search-box {
+        position: static !important;
+        clear: both;
+    }
+    @media screen and (max-width: 782px), all
+        .wp-admin #wpfooter {
+        display: none;
+    }
+ }
+</style>'; <?php
 });
 ?>
