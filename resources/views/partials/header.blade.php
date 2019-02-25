@@ -7,7 +7,7 @@
     <div class="d-md-none mobile-header d-flex justify-content-between">
 
       @if (is_user_logged_in())
- 	      <a class="btn btn-red" href="{{ get_permalink( get_option('woocommerce_myaccount_page_id') ) }}" title=" {{ _e('My Account','rastatheme') }}">{{ _e('Account','rastatheme') }} </a>
+ 	      <a class="btn btn-red" href="{{ get_permalink( get_option('woocommerce_myaccount_page_id') ) }}" title="{{ _e('My Account','rastatheme') }}">{{ _e('Account','rastatheme') }} </a>
       @else
  	      <button type="button" class="btn btn-red login-toggle collapsed" data-toggle="collapse" data-target="#header-login" aria-expanded="false">
            {{ _e('Login','rastatheme') }}

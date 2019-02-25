@@ -44,9 +44,9 @@ add_action( 'login_enqueue_scripts', function() {
   //remove_menu_page( 'users.php' );                  //Users
   // remove_menu_page( 'tools.php' );                  //Tools
   //remove_menu_page( 'options-general.php' );        //Settings
-  global $submenu;
+  //global $submenu;
   // Appearance Menu
-  unset($submenu['themes.php'][6]); // Customize
+  //unset($submenu['themes.php'][6]); // Customize
 });
 
 
